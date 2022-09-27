@@ -39,3 +39,16 @@ app.put('/api/students',(req,res) => {
     const first_name : req.body.first_name,
     const last_name : req.body.last_name,
     const email : req.body.email
+
+    const index = students.findIndex((student) => {
+        return (student.id == id))
+    })
+
+    app.delete('/api/students',(req,res) => {
+        let std =students[index]
+        students.spilce(index,1)
+        res.json(std)
+    }else {
+        res.status(404)
+    }
+    }
